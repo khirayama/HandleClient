@@ -1,18 +1,25 @@
+import {
+  Navigator,
+} from 'react-native';
+
 export const routes = [{
   path: '/dashboard',
   title: 'Dashboard',
 }, {
-  path: '/profile',
-  title: 'Profile',
-}, {
   path: '/labels',
   title: 'Labels',
 }, {
+  path: '/profile',
+  title: 'Profile',
+  configureScene: Navigator.SceneConfigs.VerticalUpSwipeJump,
+}, {
   path: '/label',
   title: 'Label',
+  configureScene: Navigator.SceneConfigs.VerticalUpSwipeJump,
 }, {
   path: '/task',
   title: 'Task',
+  configureScene: Navigator.SceneConfigs.VerticalUpSwipeJump,
 }];
 
 export function findRoute(path) {
