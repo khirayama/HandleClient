@@ -29,6 +29,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     borderBottomColor: '#bbb',
     borderBottomWidth: StyleSheet.hairlineWidth,
+    zIndex: 1,
+    shadowColor: '#000',
+    shadowRadius: 1,
+    shadowOpacity: 0.3,
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
   },
   headerButton: {
     height: 64,
@@ -39,6 +47,7 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
+    backgroundColor: '#fff',
   },
   contentBottomButton: {
     position: 'absolute',
@@ -49,6 +58,13 @@ const styles = StyleSheet.create({
     padding: 20,
     borderTopColor: '#bbb',
     borderTopWidth: StyleSheet.hairlineWidth,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: -1,
+    },
+    shadowRadius: 1,
+    shadowOpacity: 0.3
   },
   contentBottomButtonText: {
     textAlign: 'center',
@@ -79,7 +95,6 @@ class DashboardContent extends Component {
   render() {
     return (
       <View style={styles.content}>
-        <Text>Dashboard</Text>
         <TouchableOpacity style={styles.contentBottomButton} onPress={() => this.props.navigator.push(findRoute('/task'))}>
           <Text style={styles.contentBottomButtonText}>ADD TASK</Text>
         </TouchableOpacity>

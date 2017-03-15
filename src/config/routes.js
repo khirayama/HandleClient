@@ -11,15 +11,15 @@ export const routes = [{
 }, {
   path: '/profile',
   title: 'Profile',
-  configureScene: Navigator.SceneConfigs.VerticalUpSwipeJump,
+  configureScene: Navigator.SceneConfigs.FloatFromBottom,
 }, {
   path: '/label',
   title: 'Label',
-  configureScene: Navigator.SceneConfigs.VerticalUpSwipeJump,
+  configureScene: Navigator.SceneConfigs.FloatFromBottom,
 }, {
   path: '/task',
   title: 'Task',
-  configureScene: Navigator.SceneConfigs.VerticalUpSwipeJump,
+  configureScene: Navigator.SceneConfigs.FloatFromBottom,
 }];
 
 export function findRoute(path) {

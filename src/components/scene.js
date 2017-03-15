@@ -5,13 +5,15 @@ import {
 } from 'react-native';
 
 const style = StyleSheet.create({
-  flex: 1,
+  scene: {
+    flex: 1,
+  },
 });
 
 export class Scene extends Component {
   render() {
     return (
-      <View style={style}>{this.props.children}</View>
+      <View style={style.scene}>{this.props.children}</View>
     );
   }
 }
